@@ -19,6 +19,19 @@
     flex-wrap: wrap;
     width: 100%;
 
+    .sky, .launch{
+      @media @phone{
+        display: none;
+      }
+    }
+
+    .blast{
+      @media @phone{
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
@@ -46,6 +59,14 @@
     display: flex;
     justify-content: center;
 
+
+    @media @phone{
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+      padding: 15px 35px 15px 0;
+    }
+
     .walk-text {
       width: 50%;
 
@@ -57,13 +78,30 @@
         margin-bottom: 26px;
       }
 
+      @media @phone{
+        justify-content: center;
+        width: 100%;
+        margin-top: 3%;
+        padding-left: 5%;
+      }
+
       .btn {
+        .button(8px, #22283A);
+
+        @media @phone{
+          .btn(2px,#22283A);
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @phone{
+        justify-content: center;
+        width: 100%;
+      }
       
       img {
         width: 100%;
